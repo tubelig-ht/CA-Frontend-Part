@@ -1,0 +1,27 @@
+#brand{
+    color: white;
+    font-size: x-large;
+    font-weight: bolder;
+    text-decoration:underline;
+    padding: 10px;
+    font-family: 'Yuji Boku', serif;
+}
+.nav-link{
+    font-family: 'Krona One', sans-serif;
+}
+
+#contan{
+    background-color:whitesmoke;
+}
+
+.footer{
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-top: auto;
+}

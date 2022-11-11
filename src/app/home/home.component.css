@@ -1,0 +1,18 @@
+h1{
+    font-family: 'Yuji Boku', serif;
+    font-weight: bolder;
+    font-size:xx-large;
+}
+img{
+    height: 250px;
+    width: 400px;
+}
+p{
+    font-size: larger;
+    font-family: 'Montserrat', sans-serif;
+}
+button{
+    font-weight:bold;
+    font-size: x-large;
+    font-family: 'Ubuntu', sans-serif;
+}

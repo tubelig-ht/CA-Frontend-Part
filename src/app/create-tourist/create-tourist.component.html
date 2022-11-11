@@ -1,0 +1,46 @@
+<h1>Register Tourist</h1>
+<div class="container col-md-6 offset-md-4">
+    <form #registerForm="ngForm" (ngSubmit)="registerTourist()">
+        <div class="form-group">
+            <label>Id</label>
+            <input type="number" class="form-control" #id="ngModel" id="id"  name="id" [(ngModel)]="tourist.id" disabled>
+        </div>
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="text" class="form-control" id="firstName" pattern="[a-zA-z]+$" #firstName="ngModel" name="firstName" [(ngModel)]="tourist.firstName" required>
+            <small class="error-msg" *ngIf="firstName.touched&& firstName.invalid">* Please fill this field</small> <br> 
+            <small class="error-msg" *ngIf="firstName.dirty && firstName.invalid">* Please Enter Alphabets Only</small>
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" class="form-control" id="lastName" pattern="[a-zA-z]+$" #lastName="ngModel" name="lastName" [(ngModel)]="tourist.lastName" required>
+            <small class="error-msg" *ngIf="lastName.touched && lastName.invalid">* Please fill this field</small><br>
+            <small class="error-msg" *ngIf="lastName.dirty && lastName.invalid">* Please Enter Alphabets Only</small>
+        </div>
+        <div class="form-group">
+            <label>Select Your Gender</label><br>
+            <input type="radio" value="Male" name="gender" class="radioBtn" [(ngModel)]="tourist.gender" required >
+            <span>Male</span><br>
+            <input type="radio" value="Female" name="gender" class="radioBtn" [(ngModel)]="tourist.gender" required >
+            <span>Female</span>
+        </div>
+        <div class="form-group">
+            <label for="">Age</label>
+            <input type="number" id="age" name="age" min="1" max="90" #age="ngModel" class="form-control" [(ngModel)]="tourist.age" required>
+            <small class="error-msg" *ngIf="age.invalid && age.touched">* Age should be between 1-90 Years</small>
+        </div>
+        <div class="form-group">
+            <label for="">Place</label>
+            <input type="text" id="place" name="place" #place="ngModel" pattern="[a-zA-z]+$" class="form-control" [(ngModel)]="tourist.fromPlace" required>
+            <small class="error-msg" *ngIf="place.touched && place.invalid">* Please fill this field</small> <br>
+            <small class="error-msg" *ngIf="place.dirty && place.invalid">* Please Enter Alphabets Only</small>
+            
+        </div>
+        <div class="form-group">
+            <label for="">Number of Days</label>
+            <input type="number" id="days" name="days" min="1" #days="ngModel" class="form-control" [(ngModel)]="tourist.numberOfDays" required>
+            <small class="error-msg" *ngIf="days.invalid && days.touched">* Please fill this field</small>
+        </div>
+        <button type="submit" class="btn btn-info" [disabled]="registerForm.invalid" style="padding-left:170px; padding-right: 170px;">Register</button>
+    </form>
+</div>

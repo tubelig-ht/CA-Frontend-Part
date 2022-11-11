@@ -1,0 +1,18 @@
+h1{
+    text-align: center;
+    font-family: 'Days One', sans-serif;
+    color: black
+}
+td{
+    text-align: center;
+    color:cornflowerblue;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: larger;
+}
+th{
+    text-align: center;
+    color: rgb(16, 111, 194);
+    font-weight: bolder;
+    font-size: x-large;
+    font-family: 'Ubuntu', sans-serif;
+}
